@@ -11,7 +11,7 @@
   },
   "kv_namespaces": [
     {
-      "binding": "OAUTH_KV",
+      "binding": "PDF_INVOICE_OAUTH",
       "id": "PDF_INVOICE_OAUTH"
     }
   ]
