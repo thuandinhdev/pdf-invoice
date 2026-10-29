@@ -12,7 +12,7 @@
   "kv_namespaces": [
     {
       "binding": "OAUTH_KV",
-      "id": "REPLACE_WITH_YOUR_PDF_INVOICE_OAUTH_KV_NAMESPACE_ID"
+      "id": "PDF_INVOICE_OAUTH"
     }
   ]
 }
