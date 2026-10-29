@@ -26,11 +26,14 @@ function htmlResponse(body, status = 200, extraHeaders = {}) {
       "referrer-policy": "no-referrer",
       "x-content-type-options": "nosniff",
       "content-security-policy":
-      "default-src 'none'; style-src 'unsafe-inline'; form-action 'self' https://pdf-invoice-oauth.thuandinhdev.workers.dev; base-uri 'none'; frame-ancestors 'none'",
+      "default-src 'none'; style-src 'unsafe-inline'; form-action 'self' https://pdf-invoice-oauth.thuandinhdev.workers.dev https://chatgpt.com; base-uri 'none'; frame-ancestors 'none'",
       ...extraHeaders,
     },
   });
 }
+
+
+    
 
 function errorPage(message, status = 400) {
   return htmlResponse(
