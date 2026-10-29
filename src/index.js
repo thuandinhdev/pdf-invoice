@@ -26,7 +26,7 @@ function htmlResponse(body, status = 200, extraHeaders = {}) {
       "referrer-policy": "no-referrer",
       "x-content-type-options": "nosniff",
       "content-security-policy":
-      "default-src 'none'; style-src 'unsafe-inline'; form-action https://pdf-invoice-oauth.thuandinhdev.workers.dev; base-uri 'none'; frame-ancestors 'none'",
+      "default-src 'none'; style-src 'unsafe-inline'; form-action 'self' https://pdf-invoice-oauth.thuandinhdev.workers.dev; base-uri 'none'; frame-ancestors 'none'",
       ...extraHeaders,
     },
   });
@@ -64,7 +64,7 @@ button{margin-top:18px;padding:12px 18px;border:0;border-radius:8px;background:#
 <main>
 <h1>PDF Invoice Reader</h1>
 <p>Nhập mật khẩu cấp quyền để cho phép ChatGPT truy cập các công cụ hóa đơn chỉ đọc.</p>
-<form method="post" action="/authorize/approve">
+<form method="post" action="/authorize/approve" target="_top">
 <input type="hidden" name="auth_query" value="${escapeHtml(query)}">
 <label for="passphrase">Mật khẩu cấp quyền</label>
 <input id="passphrase" name="passphrase" type="password" autocomplete="current-password" required>
