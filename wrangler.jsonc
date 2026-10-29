@@ -1,0 +1,18 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "pdf-invoice-oauth",
+  "main": "src/index.js",
+  "compatibility_date": "2026-10-29",
+  "compatibility_flags": ["global_fetch_strictly_public"],
+  "workers_dev": true,
+  "vars": {
+    "ISSUER": "https://pdf-invoice-oauth.thuandinhdev.workers.dev",
+    "MCP_SERVER_URL": "https://pdf-invoice-bridge.thuandinhdev.workers.dev/mcp"
+  },
+  "kv_namespaces": [
+    {
+      "binding": "OAUTH_KV",
+      "id": "REPLACE_WITH_YOUR_PDF_INVOICE_OAUTH_KV_NAMESPACE_ID"
+    }
+  ]
+}
